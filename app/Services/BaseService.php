@@ -67,6 +67,9 @@ class BaseService
             case 'current':
                 $query->orderByDesc('updated_at');
                 break;
+            default:
+                if (\request()->order_by) $query->orderByDesc(\request()->order_by);
+                break;
         }
 
         return $query;

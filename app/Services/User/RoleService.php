@@ -78,9 +78,7 @@ class RoleService extends BaseService
 
             DB::commit();
 
-            return $request->without_relation
-                ? $role
-                : $this->getByModel($role);
+            return $this->getByModel($role, $request->without_relation);
         } catch (\Throwable $th) {
             DB::rollback();
             throw $th;

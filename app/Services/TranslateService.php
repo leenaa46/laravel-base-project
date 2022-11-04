@@ -29,11 +29,11 @@ class TranslateService
                 $data[$item['column']] = $item['value'];
             }
 
-            $model->translates()->create($data);
+            $model->translate()->create($data);
 
             DB::commit();
 
-            return $model->load('translates');
+            return $model->load('translate');
         } catch (\Throwable $th) {
             DB::rollBack();
             throw $th;
