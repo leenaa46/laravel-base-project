@@ -31,4 +31,8 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'default_user' => [
+        'name' => env('FIRST_USER_NAME', 'super_admin'),
+        'password' => env('FIRST_USER_PASSWORD', '11111111')
+    ],
 ];

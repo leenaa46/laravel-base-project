@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('translates', function (Blueprint $table) {
             $table->unsignedBigInteger('id')->primary();
             $table->string('name')->nullable();
+            $table->string('display_name')->nullable();
             $table->morphs('translateable');
             $table->unsignedBigInteger('language_id');
 
