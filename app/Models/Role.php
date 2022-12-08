@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Spatie\Permission\Models\Role as SpatieRole;
 use App\Traits\Translateable;
-use app\Traits\Snowflake;
+use App\Traits\Snowflake;
 
 class Role extends SpatieRole
 {

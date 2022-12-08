@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Spatie\Permission\Models\Permission as SpatiePermission;
 use App\Traits\Translateable;
-use app\Traits\Snowflake;
+use App\Traits\Snowflake;
 
 class Permission extends SpatiePermission
 {
