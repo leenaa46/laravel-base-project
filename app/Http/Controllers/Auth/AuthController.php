@@ -15,9 +15,15 @@ class AuthController extends Controller
         $this->service = $authService;
     }
 
-    public function login(Request $request)
+    public function login()
     {
-        $res = $this->service->login($request);
-        return $this->token($res, __('success.get_data'));
+        $res = $this->service->login(request());
+        return $this->token($res, __('success.login'));
+    }
+
+    public function logout()
+    {
+        $res = $this->service->logout();
+        return $this->success($res, __('success.logout'));
     }
 }
