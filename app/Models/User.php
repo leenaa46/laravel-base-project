@@ -13,7 +13,7 @@ use Laravel\Passport\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use App\Traits\Snowflake;
+use App\Traits\SnowFlake;
 
 
 class User extends Authenticatable implements HasMedia

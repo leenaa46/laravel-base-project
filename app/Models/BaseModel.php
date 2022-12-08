@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use App\Traits\Snowflake;
+use App\Traits\SnowFlake;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\HasMedia;
