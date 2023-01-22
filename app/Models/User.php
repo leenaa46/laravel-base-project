@@ -6,7 +6,6 @@ namespace App\Models;
 
 use Spatie\Permission\Traits\HasRoles;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
-use Spatie\MediaLibrary\MediaCollections\Models\Concerns\HasUuid;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\Image\Manipulations;
@@ -17,7 +16,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class User extends Authenticatable implements HasMedia
 {
-    use HasApiTokens, HasFactory, Notifiable,  HasRoles, InteractsWithMedia, HasUuid;
+    use HasApiTokens, HasFactory, Notifiable,  HasRoles, InteractsWithMedia;
 
     protected $guard_name = 'api';
 

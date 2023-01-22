@@ -14,11 +14,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('translates', function (Blueprint $table) {
-            $table->uuid('id')->primary();
+            $table->id();
             $table->string('name')->nullable();
             $table->string('display_name')->nullable();
             $table->morphs('translateable');
-            $table->uuid('language_id');
+            $table->unsignedBigInteger('language_id');
 
             $table->foreign('language_id')->references('id')->on('languages')->onDelete('cascade')->onUpdate('cascade');
 
