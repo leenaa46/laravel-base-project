@@ -6,6 +6,7 @@ namespace App\Models;
 
 use Spatie\Permission\Traits\HasRoles;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
+use Spatie\MediaLibrary\MediaCollections\Models\Concerns\HasUuid;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\Image\Manipulations;
@@ -13,12 +14,10 @@ use Laravel\Passport\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use App\Traits\SnowFlake;
-
 
 class User extends Authenticatable implements HasMedia
 {
-    use HasApiTokens, HasFactory, Notifiable, Snowflake, HasRoles, InteractsWithMedia;
+    use HasApiTokens, HasFactory, Notifiable,  HasRoles, InteractsWithMedia, HasUuid;
 
     protected $guard_name = 'api';
 

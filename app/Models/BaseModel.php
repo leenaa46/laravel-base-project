@@ -2,8 +2,8 @@
 
 namespace App\Models;
 
-use App\Traits\SnowFlake;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
+use Spatie\MediaLibrary\MediaCollections\Models\Concerns\HasUuid;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\Image\Manipulations;
@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class BaseModel extends Model implements HasMedia
 {
-    use Snowflake, InteractsWithMedia;
+    use  InteractsWithMedia, HasUuid;
 
     public function registerMediaConversions(Media $media = null): void
     {
